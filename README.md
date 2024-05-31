@@ -2,7 +2,6 @@
 [Gradle Version Catalog](https://docs.gradle.org/current/userguide/platforms.html)
 
 # 사용방법
-
 ## 1. settings.gradle.kts에 아래 코드 추가
 
 ```kotlin
