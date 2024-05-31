@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rolroralra/gradle-version-catalog/compare/v1.0.0...v1.1.0) (2024-05-31)
+
+
+### Features
+
+* libs.versions.toml 수정 ([#3](https://github.com/rolroralra/gradle-version-catalog/issues/3)) ([ba843fe](https://github.com/rolroralra/gradle-version-catalog/commit/ba843fea1fdbf52ebd36b3b6b0287a2079a943c0))
+
 # 1.0.0 (2024-05-31)
 
 
