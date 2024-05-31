@@ -3,7 +3,6 @@
 
 # 사용방법
 ## 1. settings.gradle.kts에 아래 코드 추가
-
 ```kotlin
 dependencyResolutionManagement {
     fun ExtraPropertiesExtension.findProperty(name: String): String? {
@@ -32,9 +31,6 @@ dependencyResolutionManagement {
 ```
 
 ## 2. build.gradle.kts에 아래 코드 추가
-
-socar-spring-boot-dependencies는 모든 bom을 포함하고 있습니다.
-
 ```kotlin
 subprojects {
     val backendLibs = rootProject.backendLibs
