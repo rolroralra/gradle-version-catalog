@@ -13,6 +13,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/exec": "^6.0.3",
     "husky": "^8.0.0",
     "semantic-release": "^23.1.1"
   }

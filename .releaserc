@@ -1,0 +1,25 @@
+{
+    "branches": [
+        "main",
+        {
+            "name": "develop",
+            "prerelease": true
+        },
+         {
+             "name": "test-*",
+             "prerelease": true
+         }
+
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/exec",
+            {
+                "verifyReleaseCmd": "echo \"NEXT_RELEASE_VERSION=${nextRelease.version}\" >> $GITHUB_OUTPUT"
+            }
+        ],
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/github"
+    ]
+}
