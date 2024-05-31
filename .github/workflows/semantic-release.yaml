@@ -24,6 +24,7 @@ jobs:
     - name: Get next release version
       id: get-next-release-version
       env:
+        GITHUB_TOKEN: ${{ secrets.REPO_KEY }}
         GH_TOKEN: ${{ secrets.REPO_KEY }}
       run: npx semantic-release
   start-workflows:
