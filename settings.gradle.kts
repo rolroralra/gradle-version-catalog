@@ -5,8 +5,8 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://maven.pkg.github.com/rolroralra/maven-repo")
             credentials {
-                username = extra.findProperty("gpr.user") ?: System.getenv("REPO_USERNAME")
-                password = extra.findProperty("gpr.token") ?: System.getenv("REPO_KEY")
+                username = extra.findProperty("repo.user") ?: System.getenv("REPO_USERNAME")
+                password = extra.findProperty("repo.token") ?: System.getenv("REPO_TOKEN")
             }
         }
         mavenCentral()

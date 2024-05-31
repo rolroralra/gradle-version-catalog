@@ -24,6 +24,6 @@ jobs:
     - name: Build with Gradle
       env:
         REPO_USERNAME: ${{ secrets.REPO_USERNAME }}
-        REPO_KEY: ${{ secrets.REPO_KEY }}
+        REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
         TZ: "Asia/Seoul"
       run: ./gradlew clean test
