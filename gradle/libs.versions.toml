@@ -1,0 +1,100 @@
+# libs.versions.toml
+[versions]
+# kotlin.versions.toml
+kotlin = "1.9.23"
+kotlinx-coroutines = "1.8.0"
+kotlinx-serialization = "1.6.3"
+
+# spring.versions.toml
+springBoot = "2.5.4"
+spring-cloud-aws = "2.4.4"
+spring-cloud-openfeign = "3.1.9"
+spring-kafka = "2.9.13"
+
+# queryt
+querydsl = "5.1.0"
+
+# grpc.versions.toml
+protobuf = "3.25.1"
+grpc = "1.58.0"
+grpc-kotlin = "1.4.1"
+grpc-starter = "2.15.0.RELEASE"
+google-common-protos = "2.36.0"
+
+# awssdk.versions.toml
+awssdk-v1 = "1.12.679"
+
+# junit.versions.toml
+junit-jupiter = "5.10.2"
+
+# common.versions.toml
+guava = "33.0.0-jre"
+
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core-jvm = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-reactive = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactive", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-jdk8 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-guava = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-guava", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-slf4j = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-serialization-bom = { module = "org.jetbrains.kotlinx:kotlinx-serialization-bom", version.ref = "kotlinx-serialization" }
+
+
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
+
+spring-security-cas = { module = "org.springframework.security:spring-security-cas" }
+
+spring-cloud-starter-openfeign = { module = "org.springframework.cloud:spring-cloud-starter-openfeign", version.ref = "spring-cloud-openfeign" }
+spring-cloud-openfeign-core = { module = "org.springframework.cloud:spring-cloud-openfeign-core", version.ref = "spring-cloud-openfeign" }
+spring-cloud-aws-autoconfigure = { module = "io.awspring.cloud:spring-cloud-aws-autoconfigure", version.ref = "spring-cloud-aws" }
+spring-cloud-starter-aws-messaging = { module = "io.awspring.cloud:spring-cloud-starter-aws-messaging", version.ref = "spring-cloud-aws" }
+spring-cloud-starter-aws = { module = "io.awspring.cloud:spring-cloud-starter-aws", version.ref = "spring-cloud-aws" }
+spring-cloud-aws-secrets-manager-config = { module = "io.awspring.cloud:spring-cloud-aws-secrets-manager-config", version.ref = "spring-cloud-aws" }
+spring-cloud-starter-aws-secrets-manager-config = { module = "io.awspring.cloud:spring-cloud-starter-aws-secrets-manager-config", version.ref = "spring-cloud-aws" }
+
+grpc-protobuf = { module = "io.grpc:grpc-protobuf", version.ref = "grpc" }
+grpc-stub = { module = "io.grpc:grpc-stub", version.ref = "grpc" }
+grpc-netty = { module = "io.grpc:grpc-netty", version.ref = "grpc" }
+grpc-netty-shaded = { module = "io.grpc:grpc-netty-shaded", version.ref = "grpc" }
+grpc-kotlin-stub = { module = "io.grpc:grpc-kotlin-stub", version.ref = "grpc-kotlin" }
+grpc-testing = { module = "io.grpc:grpc-testing", version.ref = "grpc" }
+protobuf-kotlin = { module = "com.google.protobuf:protobuf-kotlin", version.ref = "protobuf" }
+protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
+protobuf-java-util = { module = "com.google.protobuf:protobuf-java-util", version.ref = "protobuf" }
+proto-google-common-protos = { module = "com.google.api.grpc:proto-google-common-protos", version.ref = "google-common-protos" }
+
+aws-java-sdk-s3 = { module = "com.amazonaws:aws-java-sdk-s3", version.ref = "awssdk-v1" }
+aws-java-sdk-sts = { module = "com.amazonaws:aws-java-sdk-sts", version.ref = "awssdk-v1" }
+aws-java-sdk-secretsmanager = { module = "com.amazonaws:aws-java-sdk-secretsmanager", version.ref = "awssdk-v1" }
+aws-java-sdk-dms = { module = "com.amazonaws:aws-java-sdk-dms", version.ref = "awssdk-v1" }
+
+
+junit-jupiter-bom = { module = "org.junit:junit-bom", version.ref = "junit-jupiter" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter" }
+
+
+
+
+[bundles]
+grpc = ["grpc-protobuf", "grpc-stub", "grpc-netty-shaded",
+    "grpc-kotlin-stub", "protobuf-java", "protobuf-java-util", "protobuf-kotlin",
+    "proto-google-common-protos"]
+kotlin-stdlib = ["kotlin-stdlib", "kotlin-stdlib-jdk7", "kotlin-stdlib-jdk8", "kotlin-reflect"]
+junit-jupiter = ["junit-jupiter-api", "junit-jupiter-engine", "junit-jupiter-params"]
+kotlinx-coroutines-core = ["kotlinx-coroutines-core", "kotlinx-coroutines-core-jvm"]
+kotlinx-coroutines-reactor = ["kotlinx-coroutines-reactive", "kotlinx-coroutines-reactor"]
+spring-cloud-starter-aws-secrets-manager-config = ["spring-cloud-starter-aws-secrets-manager-config", "spring-security-cas", "aws-java-sdk-sts"]
+
+[plugins]
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
