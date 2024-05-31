@@ -3,15 +3,13 @@
         "main",
         {
             "name": "develop",
-            "prerelease": true
+              "prerelease": true
         },
          {
              "name": "test-*",
              "prerelease": true
          }
-
     ],
-    "repositoryUrl": "https://github.com/rolroralra/gradle-version-catalog.git",
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",

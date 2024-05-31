@@ -2,7 +2,6 @@
   "name": "gradle-version-catalog",
   "version": "1.0.0",
   "description": "A project to manage Gradle version catalog",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rolroralra/gradle-version-catalog.git"
