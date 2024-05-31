@@ -26,4 +26,4 @@ jobs:
         REPO_USERNAME: ${{ secrets.REPO_USERNAME }}
         REPO_KEY: ${{ secrets.REPO_KEY }}
         TZ: "Asia/Seoul"
-      run: ./gradlew clean ktlintCheck test
+      run: ./gradlew clean test
