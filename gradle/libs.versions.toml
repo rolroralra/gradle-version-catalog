@@ -4,15 +4,23 @@
 kotlin = "1.9.23"
 kotlinx-coroutines = "1.8.0"
 kotlinx-serialization = "1.6.3"
+ktlint = "12.1.0"
 
 # spring.versions.toml
-springBoot = "2.5.4"
+spring-boot = "2.7.18"
+spring-tx = "5.3.32"
+spring-kafka = "2.9.13"
 spring-cloud-aws = "2.4.4"
 spring-cloud-openfeign = "3.1.9"
-spring-kafka = "2.9.13"
 
-# queryt
+# ktor.versions.toml
+ktor = "2.3.9"
+
+# querydsl.versions.toml
 querydsl = "5.1.0"
+
+# reactor.versions.toml
+reactor-bom = "2020.0.32"
 
 # grpc.versions.toml
 protobuf = "3.25.1"
@@ -23,15 +31,65 @@ google-common-protos = "2.36.0"
 
 # awssdk.versions.toml
 awssdk-v1 = "1.12.679"
+awssdk-v2 = "2.25.8"
+aws-encryption = "3.0.0"
+
+# netty.versions.toml
+netty = "4.1.107.Final"
 
 # junit.versions.toml
 junit-jupiter = "5.10.2"
 
+# testcontainers.versions.toml
+testcontainers = "1.19.7"
+
 # common.versions.toml
 guava = "33.0.0-jre"
+jackson-bom = "2.16.2"
 
+# apm.versions.toml
+micrometer = "1.9.11"
+
+# plugins.versions.toml
+docker-plugin = "0.36.0"
+protobuf-plugin = "0.9.4"
 
 [libraries]
+pring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
+kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
+kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version.ref = "kotlinx-coroutines" }
+protobuf-bom = { module = "com.google.protobuf:protobuf-bom", version.ref = "protobuf" }
+grpc-bom = { module = "io.grpc:grpc-bom", version.ref = "grpc" }
+guava-bom = { module = "com.google.guava:guava-bom", version.ref = "guava" }
+awssdk-bom = { module = "software.amazon.awssdk:bom", version.ref = "awssdk-v2" }
+aws-java-sdk-bom = { module = "com.amazonaws:aws-java-sdk-bom", version.ref = "awssdk-v1" }
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version.ref = "jackson-bom" }
+querydsl-bom = { module = "com.querydsl:querydsl-bom", version.ref = "querydsl" }
+reactor-bom = { module = "io.projectreactor:reactor-bom", version.ref = "reactor-bom" }
+netty-bom = { module = "io.netty:netty-bom", version.ref = "netty" }
+spring-cloud-aws-dependencies = { module = "io.awspring.cloud:spring-cloud-aws-dependencies", version.ref = "spring-cloud-aws" }
+spring-cloud-openfeign-dependencies = { module = "org.springframework.cloud:spring-cloud-openfeign-dependencies", version.ref = "spring-cloud-openfeign" }
+junit-jupiter-bom = { module = "org.junit:junit-bom", version.ref = "junit-jupiter" }
+testcontainers-bom = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers"}
+micrometer-bom = { module = "io.micrometer:micrometer-bom", version.ref = "micrometer" }
+
+awssdk-kms = { module = "software.amazon.awssdk:kms", version.ref = "awssdk-v2" }
+awssdk-s3 = { module = "software.amazon.awssdk:s3", version.ref = "awssdk-v2" }
+awssdk-sts = { module = "software.amazon.awssdk:sts", version.ref = "awssdk-v2" }
+awssdk-cloudwatch = { module = "software.amazon.awssdk:cloudwatch", version.ref = "awssdk-v2" }
+aws-encryption-sdk-java = { module = "com.amazonaws:aws-encryption-sdk-java", version.ref = "aws-encryption" }
+
+aws-java-sdk-s3 = { module = "com.amazonaws:aws-java-sdk-s3", version.ref = "awssdk-v1" }
+aws-java-sdk-sts = { module = "com.amazonaws:aws-java-sdk-sts", version.ref = "awssdk-v1" }
+aws-java-sdk-secretsmanager = { module = "com.amazonaws:aws-java-sdk-secretsmanager", version.ref = "awssdk-v1" }
+aws-java-sdk-dms = { module = "com.amazonaws:aws-java-sdk-dms", version.ref = "awssdk-v1" }
+
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind" }
+jackson-datatype = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" }
+
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
 kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
@@ -47,10 +105,20 @@ kotlinx-coroutines-slf4j = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-bom = { module = "org.jetbrains.kotlinx:kotlinx-serialization-bom", version.ref = "kotlinx-serialization" }
 
+spring-boot = { module = "org.springframework.boot:spring-boot" }
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring-boot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security" }
+spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+spring-boot-starter-data-redis = { module = "org.springframework.boot:spring-boot-starter-data-redis" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+spring-boot-starter-amqp = { module = "org.springframework.boot:spring-boot-starter-amqp" }
+spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "spring-boot" }
+spring-tx = { module = "org.springframework:spring-tx", version.ref = "spring-tx" }
 
-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
-
-spring-security-cas = { module = "org.springframework.security:spring-security-cas" }
+reactor-core = { module = "io.projectreactor:reactor-core"}
 
 spring-cloud-starter-openfeign = { module = "org.springframework.cloud:spring-cloud-starter-openfeign", version.ref = "spring-cloud-openfeign" }
 spring-cloud-openfeign-core = { module = "org.springframework.cloud:spring-cloud-openfeign-core", version.ref = "spring-cloud-openfeign" }
@@ -59,6 +127,16 @@ spring-cloud-starter-aws-messaging = { module = "io.awspring.cloud:spring-cloud-
 spring-cloud-starter-aws = { module = "io.awspring.cloud:spring-cloud-starter-aws", version.ref = "spring-cloud-aws" }
 spring-cloud-aws-secrets-manager-config = { module = "io.awspring.cloud:spring-cloud-aws-secrets-manager-config", version.ref = "spring-cloud-aws" }
 spring-cloud-starter-aws-secrets-manager-config = { module = "io.awspring.cloud:spring-cloud-starter-aws-secrets-manager-config", version.ref = "spring-cloud-aws" }
+
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
+ktor-server-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor" }
+ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-bom = { module = "io.ktor:ktor-bom", version.ref = "ktor" }
 
 grpc-protobuf = { module = "io.grpc:grpc-protobuf", version.ref = "grpc" }
 grpc-stub = { module = "io.grpc:grpc-stub", version.ref = "grpc" }
@@ -76,14 +154,18 @@ aws-java-sdk-sts = { module = "com.amazonaws:aws-java-sdk-sts", version.ref = "a
 aws-java-sdk-secretsmanager = { module = "com.amazonaws:aws-java-sdk-secretsmanager", version.ref = "awssdk-v1" }
 aws-java-sdk-dms = { module = "com.amazonaws:aws-java-sdk-dms", version.ref = "awssdk-v1" }
 
-
-junit-jupiter-bom = { module = "org.junit:junit-bom", version.ref = "junit-jupiter" }
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
 junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter" }
 
+testcontainers = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers" }
+testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+testcontainers-mariadb = { module = "org.testcontainers:mariadb", version.ref = "testcontainers" }
+testcontainers-mysql = { module = "org.testcontainers:mysql", version.ref = "testcontainers" }
+testcontainers-localstack = { module = "org.testcontainers:localstack", version.ref = "testcontainers" }
 
-
+micrometer-core = { module = "io.micrometer:micrometer-core", version.ref = "micrometer" }
+micrometer-registry-prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer" }
 
 [bundles]
 grpc = ["grpc-protobuf", "grpc-stub", "grpc-netty-shaded",
@@ -96,5 +178,15 @@ kotlinx-coroutines-reactor = ["kotlinx-coroutines-reactive", "kotlinx-coroutines
 spring-cloud-starter-aws-secrets-manager-config = ["spring-cloud-starter-aws-secrets-manager-config", "spring-security-cas", "aws-java-sdk-sts"]
 
 [plugins]
-springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
-kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+kotlin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint"}
+
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+
+docker = { id = "com.palantir.docker", version.ref = "docker-plugin" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobuf-plugin"}

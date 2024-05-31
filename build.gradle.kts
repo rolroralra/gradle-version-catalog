@@ -1,3 +1,5 @@
+val currentVersion: String by project
+
 plugins {
     java
     `maven-publish`
@@ -5,7 +7,7 @@ plugins {
 }
 
 group = "com.rolroralra.spring.gradle"
-version = "1.0.1"
+version = currentVersion
 
 tasks.register<Copy>("copyLibsVersions") {
     description = "Copy libs.versions.toml to resources"
@@ -36,8 +38,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/rolroralra/maven-repo")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.token") as String? ?: System.getenv("TOKEN")
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_REPO_USERNAME")
+                password = project.findProperty("gpr.token") as String? ?: System.getenv("GITHUB_REPO_KEY")
             }
         }
     }

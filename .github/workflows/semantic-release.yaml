@@ -1,0 +1,42 @@
+name: semantic-release-prod
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+    - ".github/**"
+    branches:
+    - "main"
+jobs:
+  semantic-release:
+    runs-on: ubuntu-latest
+    outputs:
+      next-release-version: ${{ steps.get-next-release-version.outputs.NEXT_RELEASE_VERSION }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Get next release version
+      id: get-next-release-version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_KEY }}
+      run: npx semantic-release
+  start-workflows:
+    strategy:
+      matrix:
+        workflows: [
+          { workflow_id: "deploy-maven-repo.yaml" },
+        ]
+    needs: [ semantic-release ]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start workflows
+      if: ${{ needs.semantic-release.outputs.next-release-version != '' }}
+      run: gh workflow run ${{ matrix.workflows.workflow_id }} --ref v${{ needs.semantic-release.outputs.next-release-version }} --repo ${{ github.repository }} -F release-version=${{ needs.semantic-release.outputs.next-release-version }}
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_REPO_KEY }}
