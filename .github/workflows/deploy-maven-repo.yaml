@@ -31,7 +31,7 @@ jobs:
 #        password: ${{ secrets.BUF_TOKEN }}
     - name: Build with Gradle
       env:
-        SOCAR_REPO_ID: ${{ secrets.GITHUB_REPO_USERNAME }}
-        SOCAR_REPO_KEY: ${{ secrets.GITHUB_REPO_KEY }}
+        REPO_USERNAME: ${{ secrets.REPO_USERNAME }}
+        REPO_KEY: ${{ secrets.REPO_KEY }}
         TZ: "Asia/Seoul"
       run: ./gradlew clean publish

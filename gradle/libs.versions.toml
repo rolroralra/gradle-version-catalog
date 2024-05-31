@@ -149,11 +149,6 @@ protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "p
 protobuf-java-util = { module = "com.google.protobuf:protobuf-java-util", version.ref = "protobuf" }
 proto-google-common-protos = { module = "com.google.api.grpc:proto-google-common-protos", version.ref = "google-common-protos" }
 
-aws-java-sdk-s3 = { module = "com.amazonaws:aws-java-sdk-s3", version.ref = "awssdk-v1" }
-aws-java-sdk-sts = { module = "com.amazonaws:aws-java-sdk-sts", version.ref = "awssdk-v1" }
-aws-java-sdk-secretsmanager = { module = "com.amazonaws:aws-java-sdk-secretsmanager", version.ref = "awssdk-v1" }
-aws-java-sdk-dms = { module = "com.amazonaws:aws-java-sdk-dms", version.ref = "awssdk-v1" }
-
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
 junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter" }
@@ -175,7 +170,7 @@ kotlin-stdlib = ["kotlin-stdlib", "kotlin-stdlib-jdk7", "kotlin-stdlib-jdk8", "k
 junit-jupiter = ["junit-jupiter-api", "junit-jupiter-engine", "junit-jupiter-params"]
 kotlinx-coroutines-core = ["kotlinx-coroutines-core", "kotlinx-coroutines-core-jvm"]
 kotlinx-coroutines-reactor = ["kotlinx-coroutines-reactive", "kotlinx-coroutines-reactor"]
-spring-cloud-starter-aws-secrets-manager-config = ["spring-cloud-starter-aws-secrets-manager-config", "spring-security-cas", "aws-java-sdk-sts"]
+spring-cloud-starter-aws-secrets-manager-config = ["spring-cloud-starter-aws-secrets-manager-config", "aws-java-sdk-sts"]
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

@@ -38,8 +38,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/rolroralra/maven-repo")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_REPO_USERNAME")
-                password = project.findProperty("gpr.token") as String? ?: System.getenv("GITHUB_REPO_KEY")
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("REPO_USERNAME")
+                password = project.findProperty("gpr.token") as String? ?: System.getenv("REPO_KEY")
             }
         }
     }

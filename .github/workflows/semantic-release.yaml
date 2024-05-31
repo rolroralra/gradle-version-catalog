@@ -24,7 +24,7 @@ jobs:
     - name: Get next release version
       id: get-next-release-version
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_KEY }}
+        GITHUB_TOKEN: ${{ secrets.REPO_KEY }}
       run: npx semantic-release
   start-workflows:
     strategy:
@@ -39,4 +39,4 @@ jobs:
       if: ${{ needs.semantic-release.outputs.next-release-version != '' }}
       run: gh workflow run ${{ matrix.workflows.workflow_id }} --ref v${{ needs.semantic-release.outputs.next-release-version }} --repo ${{ github.repository }} -F release-version=${{ needs.semantic-release.outputs.next-release-version }}
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_REPO_KEY }}
+        GH_TOKEN: ${{ secrets.REPO_KEY }}
