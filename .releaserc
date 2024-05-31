@@ -11,15 +11,17 @@
          }
 
     ],
+    "repositoryUrl": "https://github.com/rolroralra/gradle-version-catalog.git",
     "plugins": [
         "@semantic-release/commit-analyzer",
-        [
-            "@semantic-release/exec",
-            {
-                "verifyReleaseCmd": "echo \"NEXT_RELEASE_VERSION=${nextRelease.version}\" >> $GITHUB_OUTPUT"
-            }
-        ],
         "@semantic-release/release-notes-generator",
-        "@semantic-release/github"
-    ]
+        "@semantic-release/changelog",
+        "@semantic-release/npm",
+        "@semantic-release/github",
+        "@semantic-release/exec"
+    ],
+    "verifyRelease": {
+      "path": "@semantic-release/exec",
+      "cmd": "echo \"NEXT_RELEASE_VERSION=${nextRelease.version}\" >> $GITHUB_ENV"
+    }
 }

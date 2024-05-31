@@ -1,4 +1,15 @@
 {
+  "name": "gradle-version-catalog",
+  "version": "1.0.0",
+  "description": "A project to manage Gradle version catalog",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rolroralra/gradle-version-catalog.git"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Running tests...\"",
     "prepare": "husky install"
@@ -6,7 +17,12 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^12.0.0",
     "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/github": "^10.0.5",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^13.0.0",
     "husky": "^8.0.0",
     "semantic-release": "^23.1.1"
   }
