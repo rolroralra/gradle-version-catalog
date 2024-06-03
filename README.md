@@ -45,3 +45,6 @@ subprojects {
     }
 }
 ```
+
+# Semantic Release 설정 가이드
+[Semantic Release 설정 가이드 - Wiki](https://github.com/rolroralra/gradle-version-catalog/wiki/Semantic-Release-%EC%84%A4%EC%A0%95)
