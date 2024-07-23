@@ -1,5 +1,5 @@
 # Gradle Version Catalog
-[![Gradle Build & Test](https://github.com/rolroralra/gradle-version-catalog/actions/workflows/gradle-build.yaml/badge.svg)](https://github.com/socar-inc/ureca-server/actions/workflows/cicd-ureca-api-dev.yaml)
+[![Gradle Build & Test](https://github.com/rolroralra/gradle-version-catalog/actions/workflows/gradle-build.yaml/badge.svg)](https://github.com/rolroralra/gradle-version-catalog/actions/workflows/gradle-build.yaml)
 [![Gradle Build & Test](https://github.com/rolroralra/gradle-version-catalog/actions/workflows/semantic-release.yaml/badge.svg)](https://github.com/rolroralra/gradle-version-catalog/actions/workflows/semantic-release.yaml)
 
 [Gradle Version Catalog](https://docs.gradle.org/current/userguide/platforms.html)
